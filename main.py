@@ -30,12 +30,12 @@ def add_classmate(e):
         input2.value = ""
         input3.value = ""
         
-        display(f"{name} is now added!", target="listOutput", append=False)
+        display(f"{name} is now added.", target="list", append=False)
 
 def show_list(e):
-    output_div = document.getElementById("listOutput")
-    output_div.innerHTML = "<h3>Classmate List</h3>"
+    output = document.getElementById("list")
+    output.innerHTML = "<h2>Classmate List</h2>"
     
     for i, person in enumerate(classmates, 1):
         formatted_entry = f"{i}) {person['name']}, {person['section']}, {person['subject']}"
-        display(formatted_entry, target="listOutput", append=True)
+        display(formatted_entry, target="list", append=True)
